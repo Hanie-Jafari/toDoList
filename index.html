@@ -8,165 +8,166 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <title>To-Do App | Hanie Ja'fari</title>
-</head>
-<style>
-    *,
-    *::after,
-    *::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    ul,
-    li {
-        list-style: none;
-    }
+        ul,
+        li {
+            list-style: none;
+        }
 
-    body {
-        background-color: #57afda;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+        body {
+            background-color: #57afda;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
-    .container {
-        max-width: 700px;
-        background-color: #fff;
-        margin: 30px auto;
-        padding: 25px;
-        border-radius: 10px;
-    }
-
-    .btn {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 15px;
-        background-color: #8e49e9;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .btn:hover {
-        opacity: 0.9;
-    }
-
-
-    .todo .title {
-        font-size: 3rem;
-    }
-
-    .todo form {
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: start;
-    }
-
-    .todo form input,
-    .todo-wrapper input {
-        width: 90%;
-        padding: 15px;
-        border: 1px solid lightgray;
-        margin-right: 5px;
-        color: gray;
-        font-size: 16px;
-    }
-
-    .todo-wrapper input {
-        width: 100%;
-    }
-
-    .todo form input:focus,
-    .todo-wrapper input:focus {
-        outline: 1px solid gray;
-    }
-
-    .todo form .btn {
-        font-size: 30px;
-        width: 10%;
-    }
-
-
-
-    ul {
-        padding: 15px 0;
-    }
-
-    ul>li {
-        margin-bottom: 10px;
-        background-color: whitesmoke;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        font-size: 25px;
-
-    }
-
-    ul>li>i {
-        padding: 10px;
-        color: #fff;
-        font-weight: bold;
-        background-color: #e74c3f;
-        width: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    ul>li>i:hover {
-        opacity: 0.9;
-    }
-
-    ul>li>span {
-        padding: 10px;
-        width: 90%;
-        cursor: pointer;
-    }
-
-    ul>li>span:hover {
-        background-color: lightgray;
-    }
-
-    .todo-wrapper .btn {
-        font-size: 20px;
-    }
-
-    .t-d {
-        text-decoration: line-through;
-    }
-
-    @media (max-width: 768px) {
         .container {
-            max-width: 90%;
-        }
-
-        .todo .title {
-            font-size: 2rem;
-        }
-
-        ul>li {
-            font-size: 16px;
-        }
-
-        ul>li>span,
-        .todo form input {
-            width: 80%;
-        }
-
-        ul>li>i,
-        .todo form .btn {
-            width: 20%;
+            max-width: 700px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
         }
 
         .btn {
-            font-size: 20px !important;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: #8e49e9;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
         }
-    }
-</style>
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+
+        .todo .title {
+            font-size: 3rem;
+        }
+
+        .todo form {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            display: flex;
+            justify-content: start;
+        }
+
+        .todo form input,
+        .todo-wrapper input {
+            width: 90%;
+            padding: 15px;
+            border: 1px solid lightgray;
+            margin-right: 5px;
+            color: gray;
+            font-size: 16px;
+        }
+
+        .todo-wrapper input {
+            width: 100%;
+        }
+
+        .todo form input:focus,
+        .todo-wrapper input:focus {
+            outline: 1px solid gray;
+        }
+
+        .todo form .btn {
+            font-size: 30px;
+            width: 10%;
+        }
+
+
+
+        ul {
+            padding: 15px 0;
+        }
+
+        ul>li {
+            margin-bottom: 10px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            font-size: 25px;
+
+        }
+
+        ul>li>i {
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            background-color: #e74c3f;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        ul>li>i:hover {
+            opacity: 0.9;
+        }
+
+        ul>li>span {
+            padding: 10px;
+            width: 90%;
+            cursor: pointer;
+        }
+
+        ul>li>span:hover {
+            background-color: lightgray;
+        }
+
+        .todo-wrapper .btn {
+            font-size: 20px;
+        }
+
+        .t-d {
+            text-decoration: line-through;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+
+            .todo .title {
+                font-size: 2rem;
+            }
+
+            ul>li {
+                font-size: 16px;
+            }
+
+            ul>li>span,
+            .todo form input {
+                width: 80%;
+            }
+
+            ul>li>i,
+            .todo form .btn {
+                width: 20%;
+            }
+
+            .btn {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</head>
+
 
 <body>
     <div class="container">
@@ -183,47 +184,48 @@
             <button class="btn">Clear All</button>
         </div>
     </div>
-</body>
-<script>
-    const todoForm = document.querySelector(".todo form");
-    const addTodoInput = document.querySelector(".todo form input");
-    const todoList = document.querySelector(".todo-lists");
-    const clearBtn = document.querySelector(".todo-wrapper > .btn");
-    const filterInput = document.querySelector(".todo-wrapper input");
-    todoForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (addTodoInput.value.trim() !== "") {
-            const li = document.createElement("li");
-            li.innerHTML = `<span>${addTodoInput.value.trim()}</span>
-            <i>&#215;</i>`
-            todoList.appendChild(li);
-            addTodoInput.value = "";
-        }
-    });
-    clearBtn.addEventListener("click", function () {
-        todoList.innerHTML = ""
-    })
-    filterInput.addEventListener("keyup", function () {
-        for (let i = 0; i < todoList.children.length; i++) {
-            if (todoList.children[i].firstElementChild.innerHTML.trim().startsWith(filterInput.value.trim())) {
-                todoList.children[i].style.display = "flex"
-            } else {
-                todoList.children[i].style.display = "none"
+
+    <script>
+        const todoForm = document.querySelector(".todo form");
+        const addTodoInput = document.querySelector(".todo form input");
+        const todoList = document.querySelector(".todo-lists");
+        const clearBtn = document.querySelector(".todo-wrapper > .btn");
+        const filterInput = document.querySelector(".todo-wrapper input");
+        todoForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (addTodoInput.value.trim() !== "") {
+                const li = document.createElement("li");
+                li.innerHTML = `<span>${addTodoInput.value.trim()}</span>
+                <i>&#215;</i>`
+                todoList.appendChild(li);
+                addTodoInput.value = "";
             }
-        }
+        });
+        clearBtn.addEventListener("click", function () {
+            todoList.innerHTML = ""
+        })
+        filterInput.addEventListener("keyup", function () {
+            for (let i = 0; i < todoList.children.length; i++) {
+                if (todoList.children[i].firstElementChild.innerHTML.trim().startsWith(filterInput.value.trim())) {
+                    todoList.children[i].style.display = "flex"
+                } else {
+                    todoList.children[i].style.display = "none"
+                }
+            }
 
-    });
+        });
 
-    todoList.addEventListener("click", function (e) {
-        if (e.target.nodeName === "I") {
-            e.target.parentElement.remove()
-        }
-    })
-    todoList.addEventListener("click", function (e) {
-        if (e.target.nodeName === "SPAN") {
-            e.target.classList.toggle("t-d")
-        }
-    });
-</script>
+        todoList.addEventListener("click", function (e) {
+            if (e.target.nodeName === "I") {
+                e.target.parentElement.remove()
+            }
+        })
+        todoList.addEventListener("click", function (e) {
+            if (e.target.nodeName === "SPAN") {
+                e.target.classList.toggle("t-d")
+            }
+        });
+    </script>
+</body>
 
 </html>
